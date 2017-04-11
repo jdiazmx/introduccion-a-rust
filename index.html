@@ -1,0 +1,567 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Una introducción a RUST" />
+    <meta name="author" content="Jorge Antonio Díaz Lara" />
+
+    <title>Introducción a Rust - El lenguaje de programación de Mozilla</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/>
+    <link rel="shortcut icon" href="media/logo-rust.png" />
+    <link rel="apple-touch-icon" href="media/logo-rust.png" />
+</head>
+
+<body class="impress-not-supported">
+   <div class="fallback-message">
+      <p>Tu navegador web <b>no soporta las características requeridas</b> en esta presentación, por lo que se mostrará una versión simplificada.</p>
+      <p>Para una mejor experiencia utiliza la última versión de navegador web <b>Mozilla Firefox</b>.</p>
+   </div>
+
+   <div id="impress">
+       <div id="inicio" class="step" data-x="400" data-y="0" data-z = "0" data-scale="5.5">
+          <p style="font-size:95px; font-weight:bold; color:white" >Introducción a Rust</p>
+          <img src="media/rust2.png" height = "200" align="right">
+	  <p style="font-size:30px; color:white;" >El nuevo lenguaje de programación de Mozilla</p>
+	  <br> </br>
+	  <br> </br>
+	  <p style="font-size:30px; color:white;" >Por: <b> Jorge Díaz - jorge@mozilla-mexico.org</p>
+	  <p style="font-size:30px; color:white;" >Mozillian, Moodler, Rustacean y Wikipedista</p>
+      </div>
+      <div id="agenda" class="step slide" data-x="400" data-y="2000" data-z= "0" data-scale="2.5"> 
+         <div class="slide-header"> Agenda </div>
+	 <div class="slide-title">
+	    <li>¿Qué es Rust? </li>
+	    <li>Obteniendo Rust </li>
+	    <li>Hola, mundo! </li>
+	    <li>Cargo </li>
+	    <li>Recursos para aprender </li>
+	    <li>Comunidad </li>
+         </div>
+      </div>
+
+<!--- QUE ES RUST -->
+      <div id="QueEsRust" class="step slide1" data-x="4000" data-y="-4000" data-z="-5000">
+         <div class="slide-header2"> ¿Qué es Rust? </div>
+         <div class="slide-content">
+            <br> </br>
+            <img src="media/rust.png" height = "200" align="left">
+            <p>Rust es un lenguaje de programación de sistemas compilado, de propósito general y multiparadigma, que está siendo desarrollado por <b>Mozilla</b>.<br/><br />Además Rust previene fallas de segmentación y garantiza la seguridad de los hilos de ejecución.</p>
+         </div>
+      </div>
+      <div id="Objetivos" class="step slide1" data-x="5000" data-y="-4000" data-z = "-5000" >
+         <div class="slide-header2"> Objetivos de Rust </div>
+         <div class="slide-content">
+            <p>Rust está creado con base en tres objetivos: </p>
+            <li>Seguridad</li>
+            <li>Velocidad</li>
+            <li>Concurrencia</li>
+         </div>
+      </div>
+      <div id="Historia" class="step slide1" data-x="6000" data-y="-4000" data-z="-5000">
+         <div class="slide-header2"> Breve Historia de Rust </div>
+         <div class="slide-content">
+            <li>2006 Graydon Hoare siendo empleado de Mozilla inició Rust como un proyecto personal.</li>
+            <li>2009 Mozilla inicia la adopción del proyecto.</li>
+            <li>2010 Oficialmente anunciado en el Mozilla Summit 2010.</li>
+            <li>15 de Mayo del 2015 sale a la luz la primera versión estable - Rust 1.0</li>
+         </div>
+      </div>
+      <div id="Caracteristicas" class="step slide1" data-x="7000" data-y="-4000" data-z="-5000" >
+         <div class="slide-header2"> Características de Rust </div>
+         <div class="slide-content">
+            <li>Es un lenguaje compilado</li>
+            <li>Permite un control fino de las asignaciones de memoria</li>
+            <li>No requiere recolector de basura</li>
+            <li>Tiempo de ejecución mínimo</li>
+            <li>Soporta programación funcional pura, por procedimientos, imperativa y orientada a objeto</li>
+         </div>
+      </div>
+      <div id="ObteniendoRust" class="step slide1" data-x="7000" data-y="-3000" data-z="-5000">
+         <div class="slide-header2" align="center">Obteniendo Rust </div>
+         <div class="slide-content">
+            <p><br/><br/></p>
+            <img src="media/descarga-rust.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="AbreLaTerminal" class="step slide1" data-x="6000" data-y="-3000" data-z="-5000">
+         <div class="slide-header2">Ejecuta el script desde la terminal en Linux o Mac </div>
+         <div class="slide-content">
+            <img src="media/descarga-rust-02.png" width="800" align="middle">
+            <p><b>NO</b> se requiere ser <b>"root"</b> para instalar Rust.</p>
+         </div>
+      </div>
+      <div id="ObteniendoRustDescarga" class="step slide1" data-x="5000" data-y="-3000" data-z="-5000">
+         <div class="slide-header2">Pulsa la tecla "1" y después "Enter" para continuar</div>
+         <div class="slide-content">
+            <img src="media/descarga-rust-03.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Felicidades" class="step slide1" data-x="4000" data-y="-3000" data-z="-5000">
+         <div class="slide-header2">!Felicidades¡ - Ahora tienes Rust instalado </div>
+         <div class="slide-content">
+            <img src="media/descarga-rust-04.png" width="800" align="middle">
+         </div>
+      </div>
+
+<!--- HOLA MUNDO -->
+      <div id="HolaMundo" class="step slide1" data-x="4000" data-y="-2000" data-z="-5000">
+         <div class="slide-header2" align="center">Hola, mundo!</div>
+	 <div class="slide-content">
+            <p>Nuestro primer proyecto desde la terminal :)<br /><br />Con Rust es necesario crear el archivo con el código fuente para que sea compilado y obtener el archivo ejecutable de nuestro programa.<br /><br /></p>
+            <img src="media/hola-mundo-terminal-01.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="HolaMundo2" class="step slide1" data-x="5000" data-y="-2000" data-z="-5000">
+         <div class="slide-header2">Paso 1.- Abrimos la terminal y creamos el directorio del proyecto</div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-02.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="HolaMundo3" class="step slide1" data-x="6000" data-y="-2000" data-z="-5000">
+         <div class="slide-header2">Paso 2.- Nos cambiamos al directorio que acabamos de crear<br /></div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-03.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="HolaMundo4" class="step slide1" data-x="7000" data-y="-2000" data-z="-5000">
+         <div class="slide-header2">Paso 3.- Creamos el archivo con nuestro editor favorito<br /><br /></div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-04.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="HolaMundo5" class="step slide1" data-x="8000" data-y="-2000" data-z="-5000">
+         <div class="slide-header2">Paso 4.- En Vim para insertar texto, pulsamos la tecla "i"</div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-05.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="HolaMundo6" class="step slide1" data-x="8000" data-y="-1000" data-z="-5000">
+         <div class="slide-header2">Paso 5.- Ingresamos el código fuente de nuestro programa</div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-06.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="HolaMundo7" class="step slide1" data-x="7000" data-y="-1000" data-z="-5000">
+         <div class="slide-header2">Paso 6.- Guardamos nuestro archivo, en Vim pulsamos la tecla "Esc" seguido por las teclas ":wq"</div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-07.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="HolaMundo8" class="step slide1" data-x="6000" data-y="-1000" data-z="-5000">
+         <div class="slide-header2">Paso 7.- Compilamos el código fuente de nuestro proyecto</div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-08.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="HolaMundo9" class="step slide1" data-x="5000" data-y="-1000" data-z="-5000">
+         <div class="slide-header2">Paso 8.- Ejecutamos el archivo que se creó en la compilación</div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-09.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="FelicidadesHolaMundo" class="step slide1" data-x="4000" data-y="-1000" data-z="-5000">
+         <div class="slide-header2" align="center">!Felicidades¡ - Se ha ejecutado tu primer programa en Rust</div>
+	 <div class="slide-content">
+            <img src="media/hola-mundo-terminal-10.png" width="800" align="middle">
+         </div>
+      </div>
+
+<!--- CARGO -->
+      <div id="GestorDePaquetes" class="step slide1" data-x="4000" data-y="0" data-z="-5000">
+         <div class="slide-header2" align="center">Cargo - <a href="https://crates.io/" target="_blank">https://crates.io/</a></div>
+	 <div class="slide-content">
+            <p align="center"><img src="media/cargo-01.png" height="400"></p>
+            <p>El gestor de paquetes de Rust.</p>
+         </div>
+      </div>
+      <div id="Cargo2" class="step slide1" data-x="5000" data-y="0" data-z="-5000">
+         <div class="slide-header2" align="center">Archivos y paquetes</div>
+	 <div class="slide-content">
+            <img src="media/cargo-02.png" height="400" align="left">
+            <p>Cargo permite incluir archivos de código, paquetes y archivos binarios desde fuentes locales o remotas.</p>
+         </div>
+      </div>
+      <div id="Cargo3" class="step slide1" data-x="6000" data-y="0" data-z="-5000">
+         <div class="slide-header2" align="center">Hola, mundo! Versión 2</div>
+	 <div class="slide-content">
+            <p align="center">Uilizando el gestor de paquetes de Rust - Cargo.</p>
+            <img src="media/cargo-03.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Cargo4" class="step slide1" data-x="7000" data-y="0" data-z="-5000">
+         <div class="slide-header2">Paso 1.- Abrimos nuestra terminal</div>
+	 <div class="slide-content">
+            <img src="media/cargo-04.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Cargo5" class="step slide1" data-x="8000" data-y="0" data-z="-5000">
+         <div class="slide-header2">Paso 2.- Ejecutamos Cargo para crear el proyecto binario <i>hola_mundo</i></div>
+	 <div class="slide-content">
+            <img src="media/cargo-06.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Cargo6" class="step slide1" data-x="8000" data-y="1000" data-z="-5000">
+         <div class="slide-header2">Paso 3.- Nos cambiamos al directorio del proyecto (creado por Cargo)</div>
+	 <div class="slide-content">
+            <img src="media/cargo-05.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Cargo7" class="step slide1" data-x="7000" data-y="1000" data-z="-5000">
+         <div class="slide-header2">Nota:</div>
+	 <div class="slide-content">
+            <img src="media/cargo-07.png" width="800" align="left">
+            <p>Cargo crea el archivo de configuración del paquete <b><i>Cargo.toml</i></b>, el directorio para el código fuente <b><i>src</i></b> y el archivo principal de nuestro proyecto <b><i>main.rs</i></b>.</p>
+         </div>
+      </div>
+      <div id="Cargo8" class="step slide1" data-x="6000" data-y="1000" data-z="-5000">
+         <div class="slide-header2">Nota:</div>
+	 <div class="slide-content">
+            <img src="media/cargo-08.png" width="800" align="middle">
+            <p>Cargo también inicia el directorio para el seguimiento de los archivos del proyecto con el sistema de control de versiones Git.</p>
+         </div>
+      </div>
+      <div id="Cargo9" class="step slide1" data-x="5000" data-y="1000" data-z="-5000">
+         <div class="slide-header2">Paso 4.- Editamos el archivo de configuración <i>Cargo.toml</i></div>
+	 <div class="slide-content">
+            <img src="media/cargo-09.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Cargo10" class="step slide1" data-x="4000" data-y="1000" data-z="-5000">
+         <div class="slide-header2">Paso 5.- Ingresamos los datos del proyecto y dependencias</div>
+	 <div class="slide-content">
+            <img src="media/cargo-10.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Cargo11" class="step slide1" data-x="4000" data-y="2000" data-z="-5000">
+         <div class="slide-header2">Paso 6.- Editamos el archivo del programa <i>main.rs</i></div>
+	 <div class="slide-content">
+            <img src="media/cargo-11.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Cargo12" class="step slide1" data-x="5000" data-y="2000" data-z="-5000">
+         <div class="slide-header2">Nota:</div>
+	 <div class="slide-content">
+            <img src="media/cargo-12.png" width="800" align="left">
+            <p>Cargo incluye el código fuente para desplegar "Hello, World!" en forma predeterminada.</p>
+         </div>
+      </div>
+      <div id="Cargo13" class="step slide1" data-x="6000" data-y="2000" data-z="-5000">
+         <div class="slide-header2">Paso 7.- Editamos el archivo ingresando el código fuente del programa</div>
+	 <div class="slide-content">
+            <img src="media/cargo-13.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="Cargo14" class="step slide1" data-x="7000" data-y="2000" data-z="-5000">
+         <div class="slide-header2">Paso 8.- Ejecutamos el programa utilizando Cargo</div>
+	 <div class="slide-content">
+            <img src="media/cargo-14.png" width="800" align="middle">
+            <p>!Felicidades¡ - Se ha ejecutado el programa.</p>
+         </div>
+      </div>
+      <div id="Cargo15" class="step slide1" data-x="8000" data-y="2000" data-z="-5000">
+         <div class="slide-header2">Nota:</div>
+	 <div class="slide-content">
+            <img src="media/cargo-15.png" width="800" align="middle">
+            <p>Cargo crea toda la estructura de directorios para el correcto seguieminto del proyecto.</p>
+         </div>
+      </div>
+
+<!--- CARGO WEB -->
+      <div id="CargoWeb01" class="step slide1" data-x="8000" data-y="3000" data-z="-5000">
+         <div class="slide-header2" align="center">Hola, mundo! versión 3</div>
+	 <div class="slide-content">
+            <p align="center">Vámonos a la Web.</p>
+            <img src="media/cargo-web-01.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="CargoWeb02" class="step slide1" data-x="7000" data-y="3000" data-z="-5000">
+         <div class="slide-header2">Paso 1.- Abrimos la terminal </div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-02.png" width="800" align="left">
+         </div>
+      </div>
+      <div id="CargoWeb03" class="step slide1" data-x="6000" data-y="3000" data-z="-5000">
+         <div class="slide-header2">Paso 2.- Iniciamos el proyecto con Cargo</div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-03.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="CargoWeb04" class="step slide1" data-x="5000" data-y="3000" data-z="-5000">
+         <div class="slide-header2">Paso 3.- Nos cambiamos al directorio creado por Cargo</div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-04.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="CargoWeb05" class="step slide1" data-x="4000" data-y="3000" data-z="-5000">
+         <div class="slide-header2">Paso 4.- Editamos el archivo de configuración <i>Cargo.toml</i></div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-05.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="CargoWeb06" class="step slide1" data-x="4000" data-y="4000" data-z="-5000">
+         <div class="slide-header2">Paso 5.- Modificamos la información del proyecto</div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-06.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="CargoWeb07" class="step slide1" data-x="5000" data-y="4000" data-z="-5000">
+         <div class="slide-header2">Paso 6.- Incluimos la dependencia <i>iron = "*"</i></div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-07.png" width="800" align="left">
+         </div>
+      </div>
+      <div id="CargoWeb08" class="step slide1" data-x="6000" data-y="4000" data-z="-5000">
+         <div class="slide-header2">Paso 7.- Editamos el archivo del programa <i>main.rs</i></div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-08.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="CargoWeb09" class="step slide1" data-x="7000" data-y="4000" data-z="-5000">
+         <div class="slide-header2">Paso 8.- Eliminamos el código predeterminado por Cargo</div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-09.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="CargoWeb10" class="step slide1" data-x="8000" data-y="4000" data-z="-5000">
+         <div class="slide-header2">Paso 9.- Ingresamos el código del programa</div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-10.png" width="800" align="middle">
+         </div>
+      </div>
+      <div id="CargoWeb11" class="step slide1" data-x="8000" data-y="5000" data-z="-5000">
+         <div class="slide-header2">Paso 10.- Ejecutamos con Cargo</div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-11.png" width="800" align="middle">
+            <p>Cargo descarga o verifica las dependencias.</p>
+         </div>
+      </div>
+      <div id="CargoWeb12" class="step slide1" data-x="7000" data-y="5000" data-z="-5000">
+         <div class="slide-header2">Nota: </div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-12.png" width="800" align="middle">
+            <p>Cargo compila y ejecuta el programa.</p>
+         </div>
+      </div>
+      <div id="CargoWeb13" class="step slide1" data-x="6000" data-y="5000" data-z="-5000">
+         <div class="slide-header2">Paso 11.- Abre Mozilla Firefox en <i>localhost:3000</i></div>
+	 <div class="slide-content">
+            <img src="media/cargo-web-13.png" width="800" align="middle">
+            <p>!Felicidades¡ - Ahora el programa se ve con el navegador web.</p>
+         </div>
+      </div>
+      <div id="QuienEstaUsandoRust" class="step slide1" data-x="5000" data-y="5000" data-z="-5000">
+         <div class="slide-header2"> ¿Quien está usando Rust en Producción? </div>
+         <div class="slide-content">
+            <p><a href="https://www.rust-lang.org/es-ES/friends.html" target="_blank">https://www.rust-lang.org/es-ES/friends.html</a></p>
+            <img src="media/usan-rust.png" align="middle">
+         </div>
+      </div>
+      <div id="Proyectos-Con-Rust" class="step slide1" data-x="4000" data-y="5000" data-z="-5000">
+         <div class="slide-header2"> Proyectos que usan Rust</div>
+         <div class="slide-content">
+            <p>Motores de Renderizado: </p> 
+            <li>Servo - <a href="https://servo.org/" target="_blank">https://servo.org/</a></li>
+            <li>Quantum - <a href="https://wiki.mozilla.org/Quantum" target="_blank">https://wiki.mozilla.org/Quantum</a></li>
+            <p><br/> Sistemas Operativos: </p>
+            <li>Redox - <a href="https://www.redox-os.org/" target="_blank">https://www.redox-os.org/</a></li>
+            <li>IntermezzOS - <a href="http://intermezzos.github.io/" target="_blank">http://intermezzos.github.io/</a></li>
+            <p><br/> Framework Web: </p>
+            <li>Iron - <a href="http://ironframework.io/" target="_blank">http://ironframework.io/</a></li>
+            <li>Rocket - <a href="https://rocket.rs/" target="_blank">https://rocket.rs/</a></li>
+         </div>	
+      </div>
+      <div id="SERVO" class="step slide1" data-x="4000" data-y="6000" data-z="-5000">
+         <div class="slide-header2">SERVO</div>
+         <div class="slide-content">
+            <p>Servo es un motor de renderizado y navegador web moderno y de alto rendimiento.</p>
+            <p><a href="https://servo.org/" target="_blank">https://servo.org/</a></p>
+            <p align="center"><img src="media/servo.png" height = "300" align="center"></p>
+         </div>	
+      </div>
+      <div id="Quantum" class="step slide2" data-x="5000" data-y="6000" data-z="-5000">
+         <div class="slide-header2">Quantum</div>
+         <div class="slide-content">
+            <p>Es el motor de renderizado de Mozilla Firefox que toma muchos de los avances de Servo. </p>
+            <p><a href="https://wiki.mozilla.org/Quantum" target="_blank">https://wiki.mozilla.org/Quantum</a></p>
+            <p align="center"><img src="media/quantum.jpg" height = "400" align="center"></p>
+         </div>	
+      </div>
+      <div id="Redox-OS" class="step slide2" data-x="6000" data-y="6000" data-z="-5000">
+         <div class="slide-header2">Redox-OS</div>
+         <div class="slide-content">
+            <p> Redox es un Sistema Operativo similar a UNIX escrito en Rust. </p>
+            <p><a href="https://www.redox-os.org/" target="_blank">https://www.redox-os.org/</a></p>
+            <p align="center"><img src="media/redox.png" height = "400" align="center"></p>
+         </div>	
+      </div>
+      <div id="IntermezzOS-Rust" class="step slide2" data-x="7000" data-y="6000" data-z="-5000">
+         <div class="slide-header2">IntermezzOS</div>
+         <div class="slide-content">
+            <p> Es un sistema operativo para el aprendizaje.</p>
+            <p><a href="http://intermezzos.github.io/" target="_blank">http://intermezzos.github.io/</a></p>
+            <p align="center"><img src="media/intermezzo.png" height = "400" align="center"></p>
+         </div>	
+      </div>
+      <div id="Rocket-rs" class="step slide2" data-x="8000" data-y="6000" data-z="-5000">
+         <div class="slide-header2">Rocket.rs</div>
+         <div class="slide-content">
+            <p> Un framework web para Rust. </p>
+            <p><a href="https://rocket.rs/" target="_blank">https://rocket.rs/</a></p>
+            <p align="center"><img src="media/rocket-rs.png" height = "400" align="center"></p>
+         </div>	
+      </div>
+      <div id="Y-mas" class="step slide2" data-x="8000" data-y="7000" data-z="-5000">
+         <div class="slide-header2">y mas ...</div>
+         <div class="slide-content">
+            <p><li><a href="https://github.com/kud1ing/awesome-rust" target="_blank">https://github.com/kud1ing/awesome-rust</a></p>
+         </div>
+      </div>
+
+<!-- RECURSOS PARA APRENDER RUST -->
+      <div id="AprendeRust" class="step slide3" data-x="-6000" data-y="-4500" data-z="-5000">
+         <div class="slide-header2">Recursos para aprender</div>
+         <div class="slide-content">
+            <img src="media/rust-educacion.png" width = "300" align="left">
+            <p> <br/>"Me lo contaron y lo olvidé; lo vi y lo entendí; lo hice y lo aprendí"<br/><br/>- Confucio - </p>
+         </div>
+      </div>
+      <div id="SitioOficial" class="step slide3" data-x="-5000" data-y="-4230" data-z="-5000" data-rotate-z="30">
+         <div class="slide-header2">Sitio oficial</div>
+         <div class="slide-content">
+            <p><a href="https://www.rust-lang.org/es-ES/" target="_blank">https://www.rust-lang.org/es-ES/</a></p>
+            <p align="center"><img src="media/sitio-oficial.png" height = "500" align="center"></p>
+         </div>	
+      </div>
+      <div id="RustLearning" class="step slide3" data-x="-4268" data-y="-3500" data-z="-5000" data-rotate-z="60">
+         <div class="slide-header2">Rust Learning</div>
+         <div class="slide-content">
+            <p><a href="https://github.com/ctjhoa/rust-learning" target="_blank">https://github.com/ctjhoa/rust-learning</a></p>
+            <p align="center"><br /><img src="media/rust-learning.png" width = "700" align="center"></p>
+         </div>		
+      </div>
+      <div id="LibrosDeRust" class="step slide3" data-x="-4000" data-y="-2500" data-z="-5000" data-rotate-z="90">
+         <div class="slide-header2">Libros</div>
+         <div class="slide-content">
+            <p>El Libro de Rust</p>
+            <li>En - <a href="https://doc.rust-lang.org/book/the-stack-and-the-heap.html" target="_blank">https://doc.rust-lang.org/book/the-stack-and-the-heap.html</a></li>
+            <li>Es- <a href="https://goyox86.gitbooks.io/el-libro-de-rust/content/index.html" target="_blank">https://goyox86.gitbooks.io/el-libro-de-rust/content/index.html</a></li>
+            <p><br />Libros Impresos</p>
+            <li>Programming Rust: Fast, Safe Systems Development - ISBN: 1491927283</li>
+            <li>Rust Essentials - ISBN: 1785285769</li>
+         </div>	
+      </div>
+      <div id="RustByExample" class="step slide3" data-x="-4268" data-y="-1500" data-z="-5000" data-rotate-z="120">
+         <div class="slide-header2">Rust by Example</div>
+         <div class="slide-content">
+            <p><a href="http://rustbyexample.com/index.html" target="_blank">http://rustbyexample.com/index.html</a></p>
+            <p align="center"><br /><img src="media/rust-by-example.png" width = "700" align="center"></p>
+         </div>	
+      </div>
+      <div id="DesarrolloJuegos" class="step slide3" data-x="-5000" data-y="-770" data-z="-5000" data-rotate-z="150">
+         <div class="slide-header2">Juegos </div>
+         <div class="slide-content">
+            <p>Recursos para desarrolladores de video juegos. </p>
+            <p><a href="http://arewegameyet.com/" target="_blank">http://arewegameyet.com/</a></p>
+            <p align="center"><img src="media/arewegameyet.png" height = "450" align="center"></p>
+         </div>	
+      </div>
+      <div id="Servo-Starters" class="step slide3" data-x="-6000" data-y="-500" data-z="-5000" data-rotate-z="180">
+         <div class="slide-header2">Servo Starters</div>
+         <div class="slide-content">
+            <p><a href="https://starters.servo.org/" target="_blank">https://starters.servo.org/</a></p> 
+            <p align="center"><br /><img src="media/servo-starters.png" width = "700" align="center"></p>
+         </div>	
+      </div>
+      <div id="IntermezzOS" class="step slide3" data-x="-7000" data-y="-770" data-z="-5000" data-rotate-z="210">
+         <div class="slide-header2">IntermezzOS</div>
+         <div class="slide-content">
+            <p><a href="http://intermezzos.github.io/" target="_blank">http://intermezzos.github.io/</a></p>
+            <p align="center"><br /><img src="media/intermezzo.png" height = "400" align="center"></p>
+         </div>	
+      </div>
+      <div id="Mozilla-Wiki" class="step slide3" data-x="-7732" data-y="-1500" data-z="-5000" data-rotate-z="240">
+         <div class="slide-header2">Rust en el Wiki de Mozilla</div>
+         <div class="slide-content">
+            <p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Rust" target="_blank">https://developer.mozilla.org/en-US/docs/Mozilla/Rust</a></p>
+            <p align="center"><img src="media/rust-mozilla.png" height = "400" align="center"></p>
+         </div>	
+      </div>
+      <div id="Play-Rust" class="step slide3" data-x="-8000" data-y="-2500" data-z="-5000" data-rotate-z="270">
+         <div class="slide-header2">Play Rust</div>
+         <div class="slide-content">
+            <p>Aprende Rust en línea </p>
+            <li><a href="https://play.rust-lang.org/" target="_blank">https://play.rust-lang.org/</a></li>
+            <p>Instálalo en tu servidor</p>
+            <li><a href="https://github.com/rust-lang/rust-playpen" target="_blank">https://github.com/rust-lang/rust-playpen</a></li>
+            <p align="center"><img src="media/play-rust.png" width = "700" align="center"></p>
+         </div>	
+      </div>
+      <div id="Herramientas" class="step slide3" data-x="-7732" data-y="-3500" data-z="-5000" data-rotate-z="300">
+         <div class="slide-header2">Herramientas</div>
+         <div class="slide-content">
+            <p>Todo lo que necesitas para trabajar con Rust. </p>
+            <p><a href="https://github.com/ivanceras/rustupefy" target="_blank">https://forge.rust-lang.org/ides.html</a></p>
+            <p align="center"><img src="media/vim_action.gif" height = "500" align="center"></p>
+         </div>	
+      </div>
+      <div id="Comunidad" class="step slide3" data-x="-7000" data-y="-4230" data-z="-5000" data-rotate-z="330">
+         <div class="slide-header2">Comunidad</div>
+         <div class="slide-content">
+            <p><li><a href="https://www.rust-lang.org/es-ES/community.html" target="_blank">https://www.rust-lang.org/es-ES/community.html</a></li>
+            <li><a href="http://www.rustaceans.org/" target="_blank">http://www.rustaceans.org/</a></li>
+            <li><a href="https://wiki.mozilla.org/Mexico/Rust" target="_blank">https://wiki.mozilla.org/Mexico/Rust</a></li>
+            <li><a href="https://www.facebook.com/groups/programadores.rustlang" target="_blank">https://www.facebook.com/groups/programadores.rustlang</a></li></p>
+         </div>	
+      </div>
+
+<!--	CIERRE -->
+      <div id="Conclusiones" class="step slide4" data-x="-7500" data-y="4000" data-z = "-5000" data-rotate-z="180">
+         <div class="slide-header2">Conclusiones </div>
+         <div class="slide-content">
+            <p><img src="media/rust.png" height = "200" align="left">Rust es el lenguaje de programación de sistemas moderno y poderoso, que permite desarrollar en forma ágil y segura, desde aplicaciones pequeñas hasta grandes proyectos.</p>
+            <p><br />Te invito a que sigas conociendo y aprendiendo sobre este lenguaje de programación.</p>
+         </div>
+      </div>
+      <div id="Preguntas" class="step slide4" data-x="-6500" data-y="4000" data-z = "-5000" data-rotate-z="180">
+         <div class="slide-header2" align="center">Preguntas </div>
+      </div>
+      <div id="Gracias" class="step slide4" data-x="-5500" data-y="4000" data-z = "-5000" data-rotate-z="180">
+         <div class="slide-header2">Gracias </div>
+         <div class="slide-content">
+            <p><br/><br/><b>Jorge Díaz</b></p>
+            <p>jorge@mozilla-mexico.org</p>
+            <p>Github: jdiazmx</p>
+            <p>Facebook: jorgediazmx</p>
+         </div>
+      </div>
+
+<!-- MUESTRA TODO -->
+      <div id="Muestra-Todo" class="step" data-x="0" data-y="0" data-scale="10">
+      </div>
+   </div>
+
+   <div class="hint">
+      <p>Rust - El nuevo lenguaje de programación de Mozilla, por Jorge Antonio Díaz Lara</p>
+   </div>
+
+<!-- FIN -->
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Mozilla México: http://mozilla-mexico.org</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+
+
+
